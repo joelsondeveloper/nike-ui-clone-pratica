@@ -1,15 +1,9 @@
-
-
 .section-banner {
-  padding: .6rem 3rem;
+  padding: 0.6rem 3rem;
   min-height: 100vh;
-  background: radial-gradient(
-  circle,
-  rgb(41, 40, 40) 0%,
-  rgb(17, 17, 17) 80%
-);
-color: #fff;
-
+  color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -35,10 +29,10 @@ color: #fff;
 }
 
 .header-nav-item {
-  padding: .6rem 1.4rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 2rem;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header-nav-item:hover {
@@ -48,16 +42,164 @@ color: #fff;
 
 .header-login {
   background-color: transparent;
-  padding: .6rem 1.4rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: .4rem;
-  transition: all .2s ease-in-out;
+  gap: 0.4rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .header-login:hover {
   background-color: #fff;
   color: #000;
+}
+
+.banner-carroussel {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 3rem 0;
+}
+
+.banner-carroussel_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banner-carroussel_info h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.banner-carroussel_info p {
+  color: #777;
+}
+
+.banner-carroussel_size {
+  display: flex;
+  gap: 1rem;
+}
+
+.banner-carroussel_size span {
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  color: #777;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #777;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.banner-carroussel_size span:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.banner-carroussel-btn {
+  /* padding: .6rem 1.4rem; */
+  width: fit-content;
+  border-radius: 2rem;
+  background-color: #777;
+  color: #000;
+  cursor: pointer;
+  margin: auto auto 0;
+  overflow: hidden;
+}
+
+.banner-carroussel-btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  padding: 0.6rem;
+}
+
+.banner-carroussel-btn button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8rem;
+}
+
+.banner-options p {
+  color: #888;
+  font-size: .8rem;
+}
+
+.banner-options_btn {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.banner-options_btn-quantity {
+  display: flex;
+  gap: 1rem;
+}
+
+.banner-options_btn-quantity button {
+  width: 1.4rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: 2px solid #313030;
+}
+
+.options_btn-sell {
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #000;
+  font-weight: 600;
+}
+
+.options_btn-sell:hover {
+  opacity: .7;
+}
+
+.section-info {
+  padding: 2rem 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.info-title {
+  font-size: 6rem;
+  font-weight: 900;
+  width: 50%;
+}
+
+.info-description {
+  width: 25%;
+  color: inherit;
+  opacity: .8;
+  padding: 1rem 0 2rem;
+}
+
+.info-btn {
+  background-color: #fff;
+  width: 25%;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: inherit;
+  font-weight: 800;
+}
+
+.info-btn:hover {
+  outline: 1px solid #313030;
+  background-color: #ddd;
 }

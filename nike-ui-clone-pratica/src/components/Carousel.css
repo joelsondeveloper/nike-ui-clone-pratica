@@ -1,0 +1,49 @@
+.shoeAbsolute {
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  animation-name: adaptationContent;
+  animation-timeline: scroll();
+  animation-range: 0% 100%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.awaiting {
+  top: 0;
+  left: 0;
+  width: 1rem;
+  opacity: 0;
+}
+
+.fromPrev {
+  top: 60%;
+  left: 15%;
+  width: 1rem;
+  opacity: 0;
+}
+
+.fromNext {
+  top: 60%;
+  left: 80%;
+  width: 1rem;
+  opacity: 0;
+}
+
+.shoeActive {
+  top: -10%;
+  left: 25%;
+  width: 50%;
+  opacity: 1;
+}
+
+@keyframes adaptationContent {
+  0% {
+    transform: rotate(-30deg) translateX(0);
+    scale: 1;
+  }
+  100% {
+    transform: rotate(-15deg) translateX(30%) translateY(-5%);
+    scale: 2.6;
+  }
+}
