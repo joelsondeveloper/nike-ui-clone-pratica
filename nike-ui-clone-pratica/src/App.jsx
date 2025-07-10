@@ -33,6 +33,35 @@ function App() {
   const color = shoesData[shoeIndex].color;
   const features = shoesData[shoeIndex].features;
 
+  const formatFeatures = (feature) => {
+    const arrFeature = feature.split(" ");
+
+    const preposicoes = [
+      "de",
+      "da",
+      "do",
+      "na",
+      "no",
+      "em",
+      "dos",
+      "das",
+      "a",
+      "o",
+      "e",
+    ];
+
+    let featureFinal;
+    if (preposicoes.includes(arrFeature[1])) {
+      featureFinal = arrFeature.slice(0, 4);
+    } else if (preposicoes.includes(arrFeature[2])) {
+      featureFinal = arrFeature.slice(0, 2);
+    } else {
+      featureFinal = arrFeature.slice(0, 3);
+    }
+
+    return featureFinal.join(" ")
+  };
+
   const handleNext = () => {
     setPrevIndex(shoeIndex);
     setDirection("next");
@@ -112,15 +141,17 @@ function App() {
         <p className="info-description">{shoesData[shoeIndex].description}</p>
         <button className="info-btn">Comprar</button>
       </section>
-      <section className="section-tags">
+      <section className="section-tags" style={{ color: color }}>
         <h2 className="tags-title">
-          qualidade <br /> que fala
+          qualidade <br /> que fala.
         </h2>
         {features.map((feature, index) => {
-          if (index > 6)
-            <span key={index} className={`feature-${index}`}>
-              {feature}
-            </span>;
+          if (index > 6) return;
+          return (
+            <span key={index} className={`feature feature-${index}`} style={{ backgroundColor: color }}>
+              {formatFeatures(feature)}
+            </span>
+          );
         })}
       </section>
       <Carousel shoesData={shoesData} getClassName={getClassName} />
