@@ -32,7 +32,7 @@
 }
 
 .shoeActive {
-  top: -10%;
+  top: 0%;
   left: 25%;
   width: 50%;
   opacity: 1;
@@ -51,4 +51,38 @@
     transform: rotate(-15deg) translateX(-45%);
     scale: 1.2;
   }
+}
+
+@media screen and (max-width: 1110px) {
+  @keyframes adaptationContent {
+  0% {
+    transform: translateX(0) translateY(50%) rotate(-30deg);
+    scale: 1;
+  }
+  50% {
+    transform: rotate(-15deg) translateX(30%) translateY(-5%);
+    scale: 2.6;
+  }
+  100% {
+    transform: rotate(-15deg) translateX(-45%) translateY(15%);
+    scale: 1;
+  }
+}
+}
+
+@media screen and (max-width: 780px) {
+  @keyframes adaptationContent {
+  0% {
+    transform: translateX(0) translateY(70%) rotate(-30deg) ;
+    scale: 1;
+  }
+  50% {
+    transform: translateX(30%) translateY(10%) rotate(-15deg);
+    scale: 2.6;
+  }
+  100% {
+    transform: rotate(-15deg) translateX(-45%) translateY(15%);
+    scale: 1;
+  }
+}
 }

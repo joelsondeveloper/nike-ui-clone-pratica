@@ -78,7 +78,7 @@ function App() {
     <div className="app">
       <section className="section-banner" style={{ background: themeColor }}>
         <header className="header">
-          <h1 className="header-title">Nike Clone</h1>
+          <h1 className="header-title tablet-only">Nike Clone</h1>
           <nav className="header-nav">
             <ul className="header-nav-list">
               <li className="header-nav-item active">
@@ -95,7 +95,7 @@ function App() {
               </li>
             </ul>
           </nav>
-          <button className="header-login">
+          <button className="header-login tablet-only">
             <FaUser />
             <span>Login</span>
           </button>
